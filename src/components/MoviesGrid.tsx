@@ -45,11 +45,11 @@ export const MovieGrid = ({ movies }: MovieGridProps) => {
               mb={4}
             />
             <Stack gap={2}>
-              <Heading size="md">{movie.title}</Heading>
+              <Heading size="lg">{movie.title}</Heading>
               <Text color={ratingColor} fontWeight="bold">
                 Rating: {movie.rating}
               </Text>
-              <Text>{movie.description}</Text>
+              <Text color="fg.muted">{movie.description}</Text>
             </Stack>
           </CardBody>
         </Card.Root>

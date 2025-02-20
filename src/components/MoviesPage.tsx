@@ -20,7 +20,6 @@ interface MovieResponse {
 
 const MOVIES_PER_PAGE = 12
 
-
 export const MoviesPage = () => {
     const [movies, setMovies] = useState<Movie[]>([])
     const [currentPage, setCurrentPage] = useState(1)
@@ -58,8 +57,6 @@ export const MoviesPage = () => {
 
     const totalPages = Math.ceil(total / limit)
 
-
-
     return (
         <Container maxW="container.xl" py={8}>
             <HStack justify="center" pb={8}>
@@ -84,7 +81,7 @@ export const MoviesPage = () => {
                         <Card.Body>
                             <VStack justify="center" >
                                 <Text textAlign="center"><b>Error featching movies:</b></Text>
-                                <Text textAlign="center" color={"red.600"}>{error}</Text>
+                                <Text textAlign="center" color={"fg.error"}>{error}</Text>
                             </VStack>
                             <VStack justify="center" >
                                 <Button size="xl" mt={2} onClick={() => fetchMovies(currentPage)}>Try again</Button>
